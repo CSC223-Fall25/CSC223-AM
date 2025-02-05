@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="csc223.am.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-04T21:53:08" hostname="AMETZ_LAPTOP" time="0.015">
+  <properties/>
+  <testcase name="appHasAGreeting()" classname="csc223.am.AppTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

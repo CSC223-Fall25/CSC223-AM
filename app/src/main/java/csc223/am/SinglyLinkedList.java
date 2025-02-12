@@ -106,7 +106,7 @@ public class SinglyLinkedList implements LinkedList {
 
     // Get the index of an item, if it exists else return -1
     public int indexOf(char item){
-        int i = 1;
+        int i = 0;
         Node curr = this.head;
         while (curr != null){
             if (curr.data == item){
@@ -121,7 +121,7 @@ public class SinglyLinkedList implements LinkedList {
 
     // Get the last index of an item, if it exists else return -1
     public int lastIndexOf(char item){
-        int i = 1;
+        int i = 0;
         int curr_index = -1;
         Node curr = this.head;
         while (curr != null){

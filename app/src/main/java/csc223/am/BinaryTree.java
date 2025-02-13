@@ -18,17 +18,35 @@ public class BinaryTree implements Tree{
         }
         return out;
     }
+
+
+    public String preorder(){
+        String out = new String();
+        return preorder(this.root, out);
+    }
     public String preorder(TreeNode curr, String out){
         out += curr.data;
         preorder(curr.left, out);
         preorder(curr.right, out);
         return out;
     }
+
+
+    public String inorder(){
+        String out = new String();
+        return inorder(this.root, out);
+    }
     public String inorder(TreeNode curr, String out){
         inorder(curr.left, out);
         out += curr.data;
         inorder(curr.right, out);
         return out;
+    }
+
+
+    public String postorder(){
+        String out = new String();
+        return inorder(this.root, out);
     }
     public String postorder(TreeNode curr, String out){
         postorder(curr.left, out);

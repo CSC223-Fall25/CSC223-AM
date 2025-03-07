@@ -2,10 +2,6 @@ package csc223.am;
 
 public class BinaryTree implements Tree{
     TreeNode root;
-    int height;
-    public BinaryTree(){
-        height = 0;
-    }
     public String levelorder(){
         String out = new String();
         BTQueue queue = new BTQueue();
@@ -58,7 +54,6 @@ public class BinaryTree implements Tree{
         TreeNode newnode = new TreeNode(item);
         if (this.root == null){
             this.root = newnode;
-            this.height += 1;
         } else {
             BTQueue queue = new BTQueue();
             queue.enqueue(this.root);
@@ -66,7 +61,6 @@ public class BinaryTree implements Tree{
                 TreeNode curr = queue.dequeue();
                 if (curr.left == null){
                     curr.left = newnode;
-                    this.height += 1;
                     break;
                 } else if (curr.right == null){
                     curr.right = newnode;
@@ -107,6 +101,14 @@ public class BinaryTree implements Tree{
         return this.root != null;
     }
     public int height(){
-        return this.height;
+        return this.height(this.root);
+    }
+    public int height(TreeNode curr){
+        if (curr == null){
+            return 0;
+        }
+        int lh = height(curr.left);
+        int rh = height(curr.right);
+        return max(lh, rh) + 1;
     }
 }

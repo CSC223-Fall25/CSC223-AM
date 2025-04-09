@@ -33,7 +33,7 @@ class Judge {
                 return i;
             }
         }
-
+s
         return -1;
     }
 

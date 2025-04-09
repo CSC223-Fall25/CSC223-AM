@@ -1,7 +1,7 @@
 
 package main.java.csc223.am;
 
-class Solution {
+class Solution {s
     public int findCenter(int[][] edges) {
 
     //Since we're guaranteed to have a star-shaped graph,
